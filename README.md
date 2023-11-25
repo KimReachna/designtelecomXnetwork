@@ -1,123 +1,45 @@
-# Шаблон каталога курса для студентов
+## Work 1: A fully accessible two-service Erlang model with the same service intensities
+1. Describe step by step the algorithm for calculating the probabilistic characteristics of the model (the probability of blocking a request of each type, the average number of requests in the system).
+2. Create a program that implements the calculation of the probability distribution, the probability of blocking, the average number of serviced requests for any values of the source data. The program should display: 
+    - the value of the probability distribution, 
+    - values of blocking probabilities, 
+    - the value of the average number of applications. 
+3. Plot the dependence of the probability of blocking on the intensity of receipt of service requests. 
+4. Plot the dependence of the average number of serviced requests on the intensity of receipt of requests for the provision of services.
 
-## Скачать репозиторий
 
-git clone --recursive https://github.com/yamadharma/course-directory-student-template.git
 
-# Основные идеи
+## Work 2: An incomplete two-service Erlang model with the same service intensities and reserved capacity
 
--   Стандартные соглашения об именах
--   Стандартное соглашение для путей к файлам
--   Стандартная настройка курса внутри шаблона курса
+1. Describe step by step the algorithm for calculating the probabilistic characteristics of the model (the probability of blocking a request of each type, the average number of requests in the system). 
+2. Create a program that implements the calculation of the probability distribution, the probability of blocking, the average number of serviced requests for any values of the source data. The program should display: 
+    - the value of the probability distribution, 
+    - values of blocking probabilities, 
+    - the value of the average number of applications. 
+3. Plot the dependence of the probability of blocking on the intensity the proposed load created by requests of the first type. 
+4. Plot the dependence of the average number of serviced requests on the intensity of receipt of requests for the provision of services.
 
-# Общие правила
+## Work 3: Two-service model with elastic traffic
 
--   Рабочее пространство по предмету располагается в следующей иерархии:
+1. Describe step by step the algorithm for calculating the probability distribution of the model states (the probability of blocking a request of each type, the average number of requests in the system). 
+2. Create a program that implements the calculation of the probability distribution, the average number of serviced requests for any values of the source data, the average time of servicing the request. The program should display: 
+- the value of the probability distribution, 
+- the value of the average number of requests, 
+- the value of the average request service time. 
+3. Plot the dependence of the average service time of the request on the intensity of receipt of service requests. 
+4. Plot the dependence of the average number of serviced requests on the intensity of receipt of requests for the provision of services.
 
-    ``` bash
-    ~/work/study/
-    └── <учебный год>/
-        └── <название предмета>/
-            └── <код предмета>/
-    ```
+## Work 4: An incomplete two-service Erlang model with redundancy for the second type and different service intensities. Reserved devices are filled in first
 
--   Например, для 2022--2023 учебного года и предмета «Операционные
-    системы» (код предмета `os-intro`) структура каталогов
-    примет следующий вид:
-
-    ``` bash
-    ~/work/study/
-    └── 2022-2023/
-        └── Операционные системы/
-            └── os-intro/
-    ```
-
--   Название проекта на хостинге git имеет вид:
-
-    ``` example
-    study_<учебный год>_<код предмета>
-    ```
-
--   Например, для 2022--2023 учебного года и предмета «Операционные
-    системы» (код предмета `os-intro`) название проекта
-    примет следующий вид:
-
-    ``` example
-    study_2022-2023_os-intro
-    ```
-
--   Каталог для лабораторных работ имеет вид `labs`.
-
--   Каталоги для лабораторных работ имеют вид `lab<номер>`,
-    например: `lab01`, `lab02` и т.д.
-
--   Каталог для групповых проектов имеет вид `group-project`.
-
--   Каталог для персональных проектов имеет вид
-    `personal-project`.
-
--   Если проектов несколько, то они нумеруются подобно лабораторным
-    работам.
-
--   Этапы проекта обозначаются как `stage<номер>`.
-
-# Шаблон для рабочего пространства
-
--   Репозиторий:
-    <https://github.com/yamadharma/course-directory-student-template>.
-
-## Сознание репозитория курса на основе шаблона
-
--   Репозиторий на основе шаблона можно создать либо вручную, через
-    web-интерфейс, либо с помощью утилит `gh` (см. [github:
-    утилиты командной строки](id:d1925a41-6b4c-4a3a-b102-6337891b8841)).
-
--   Создание с помощью утилит.
-
--   Создание выглядит следующим образом:
-
-    ``` shell
-    gh repo create <new-repo-name> --template="<owner/template-repo>"
-    ```
-
--   Например, для 2022--2023 учебного года и предмета «Операционные
-    системы» (код предмета `os-intro`) создание репозитория
-    примет следующий вид:
-
-    ``` shell
-    mkdir -p ~/work/study/2022-2023/"Операционные системы"
-    cd ~/work/study/2022-2023/"Операционные системы"
-    gh repo create study_2022-2023_os-intro --template=yamadharma/course-directory-student-template --public
-    git clone --recursive git@github.com:<owner>/study_2022-2023_os-intro.git os-intro
-    ```
-
--   Сделать свой репозиторий на основе шаблона можно и вручную.
-
-## Настройка каталога курса
-
--   Перейдите в каталог курса:
-
-    ``` shell
-    cd ~/work/study/2022-2023/"Операционные системы"/os-intro
-    ```
-
--   Удалите лишние файлы:
-
-    ``` shell
-    rm package.json
-    ```
-
--   Создайте необходимые каталоги:
-
-    ``` shell
-    echo os-intro > COURSE
-    make
-    ```
-
--   Отправьте файлы на сервер:
-
-    ``` shell
-    git add .
-    git commit -am 'feat(main): make course structure'
-    git push
-    ```
+1. Describing the model. 
+2. Draw a diagram of the model. 
+3. Define the state space. 
+4. Build a diagram of transition intensities. 
+5. Identify multiple locks and reception. 
+6. Write out СУГБ, СУЛБ. 
+7. Get a formula for calculating the probability distribution. 
+8. Get a formula for calculating the probability of blocking an application of each type. 
+9. Get a formula for calculating the average number of applications served in the system. 
+10.Create a program that implements the calculation of the probability distribution, the probability of blocking, the average number of applications for any values of the source data. 
+11. Plot the dependence of the probability of blocking on the intensity of receipt of applications. 
+12. Plot the dependence of the average number of serviced applications on the intensity of receipt of applications for the provision of services.
