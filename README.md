@@ -40,6 +40,6 @@
 7. Get a formula for calculating the probability distribution. 
 8. Get a formula for calculating the probability of blocking an application of each type. 
 9. Get a formula for calculating the average number of applications served in the system. 
-10.Create a program that implements the calculation of the probability distribution, the probability of blocking, the average number of applications for any values of the source data. 
+10. Create a program that implements the calculation of the probability distribution, the probability of blocking, the average number of applications for any values of the source data. 
 11. Plot the dependence of the probability of blocking on the intensity of receipt of applications. 
 12. Plot the dependence of the average number of serviced applications on the intensity of receipt of applications for the provision of services.
